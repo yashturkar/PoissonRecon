@@ -1,3 +1,27 @@
+```
+
+sudo apt install libjpeg-dev
+sudo apt install libboost-dev
+sudo apt install libboost-system-dev
+sudo apt install  zlib1g-dev libpng-dev
+
+git clone https://github.com/mkazhdan/PoissonRecon.git
+
+cd PoissonRecon
+
+make
+
+cd Bin/Linux
+
+./PoissonRecon --in a.ply --out b.ply --depth 10 --pointWeight 0
+
+```
+This will take quite some time to finish. In case you want to quickly finish the build process, then navigate to the preprocessor.h file inside Src/ and uncomment the following line of code. This will make sure that the build finishes soon.
+
+```
+//#define FAST_COMPILE // If enabled, only a single version of the code is compiled
+```
+
 <center><h2>Adaptive Multigrid Solvers (Version 18.60)</h2></center>
 <center>
 <a href="#LINKS">links</a>
